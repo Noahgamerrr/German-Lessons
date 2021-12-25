@@ -1,10 +1,24 @@
 * {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
 
 body {
   background: rgb(255, 252, 227);
+}
+
+.icon {
+  display: none;
+}
+
+.example {
+  margin-top: 15px;
+}
+
+.indent::before {
+  content: "Example: ";
+  visibility: hidden;
 }
 
 header {
@@ -182,8 +196,45 @@ iframe[seamless] {
 }
 
 #sobotka {
-   height: 50%;
-   width: auto;
+   width: 50%;
+}
+
+@media only screen and (max-width: 999px) {
+  #menu {
+    display: none;
+  }
+
+  article {
+    position: absolute;
+  }
+
+  .weird-article {
+    width: 100%;
+  }
+
+  .icon {
+    display: inline-block;
+    border: 3px solid red;
+    border-radius: 3px;
+    position: fixed;
+    top: 93%;
+    left: 2%;
+    background: white;
+    display: grid;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 999px){
+  nav {
+    margin: 0px;
+  }
+
+  iframe {
+    margin: 0px;
+    left: 0%;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 700px) {
@@ -196,7 +247,6 @@ iframe[seamless] {
   }
 
   iframe {
-    position: fixed;
     height: 100%;
   }
 }
@@ -211,12 +261,31 @@ iframe[seamless] {
 
   main {
     padding: 4.1vw 0px 0px;
+    display: grid;
+    grid-template-columns: 75% 25%;
   }
 
-  nav {
+  article {
+    padding: 5px 20px;
+    display: inline-block;
+    font-size: 25px;
+    grid-column: 1 / span 1;
+  }
+
+
+  #menu {
+    grid-column: 2 / span 1;
+    width: 25%;
+  }
+
+  #body-menu-site {
+    width: 25%;
+  }
+
+  #nav-menu-site {
     height: 100%;
     width: 25%;
-    padding-left: 20px;
+    padding-left: 40px;
     font-size: 20px;
     display: inline-block;
     position: fixed;
@@ -228,13 +297,6 @@ iframe[seamless] {
     text-align: center;
   }
 
-  article {
-    padding: 5px 20px;
-    display: inline-block;
-    width: 75%;
-    font-size: 25px;
-  }
-
   caption {
     font-size: 25px;
   }
@@ -242,9 +304,14 @@ iframe[seamless] {
   figure {
     width: 50%;
     margin-right: 15px;
-    display: inline-block;
+    display: inline;
     float: left;
     overflow: auto;
+  }
+
+  #sobotka {
+    height: 25%;
+    width: auto;
   }
 
   article ul {
@@ -264,7 +331,7 @@ iframe[seamless] {
   }
 
   .section-with-img > h2 p {
-    display: inline-block;
+    display: inline;
     float: right;
     overflow: auto;
   }
@@ -276,5 +343,9 @@ iframe[seamless] {
 
   #parties {
     margin-top: 250px;
+  }
+
+  iframe {
+    position: fixed;
   }
 }
