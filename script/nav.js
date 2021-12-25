@@ -6,7 +6,7 @@ function myFunction() {
     y.style.top = "inherit";
   } else {
     x.style.display = "block";
-    y.style.top = "80%";
+    y.style.top = "84vh";
     window.scrollTo({
         top: 0,
         left: 0,
