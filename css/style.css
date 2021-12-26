@@ -72,6 +72,10 @@ img {
   width: 100%;
 }
 
+.overflow {
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   height: auto;
@@ -143,7 +147,7 @@ nav a:hover {
 
 iframe {
   position: absolute;
-  height: 65vh;
+  height: 60%;
   width: 100%;
 }
 
@@ -196,7 +200,7 @@ iframe[seamless] {
 }
 
 #sobotka {
-   width: 50%;
+   width: 100%;
 }
 
 @media only screen and (max-width: 999px) {
